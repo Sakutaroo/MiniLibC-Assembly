@@ -34,7 +34,6 @@ all:	$(NAME)
 $(NAME):	$(OBJ_TEST) $(OBJ)
 	gcc -o $(NAME) $(OBJ_TEST) $(OBJ) $(TESTFLAGS) -ldl
 	cp unit_tests ../
-# -ldl for linking else dlopen, dlsym and dlclose don't work
 
 clean:
 	rm -f $(NAME)
